@@ -1,10 +1,11 @@
 # Airport Codes
 > Airport codes (IATA) and information pulled from OpenFlights.org
+> Updated due to dependency vulnerabilities
 
 ## Install
 
 ```
-npm install airport-codes
+npm install @nitro-land/airport-codes
 ```
 
 ## Usage
@@ -12,7 +13,7 @@ npm install airport-codes
 The list of airport codes is wrapped in a Backbone Collection, so have access to all normal collection methods like `findWhere`, `at`, and `sort`.
 
 ```javascript
-var airports = require('airport-codes');
+var airports = require('@nitro-land/airport-codes');
 
 console.log(airports.findWhere({ iata: 'LAX' }).get('name'));
 //=> Los Angeles Intl
@@ -31,8 +32,8 @@ console.log(airports.at(0).get('name'));
 If you'd like only the JSON list of airport codes, you can use either the Backbone Collection's `toJSON` method or import the json list directly:
 
 ```javascript
-require('airport-codes').toJSON();
-require('airport-codes/airports.json');
+require('@nitro-land/airport-codes').toJSON();
+require('@nitro-land/airport-codes/airports.json');
 ```
 
 ## Update the list of Airport Codes
